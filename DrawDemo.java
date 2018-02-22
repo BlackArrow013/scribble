@@ -51,9 +51,7 @@ public class DrawDemo
     }
     
     /**
-     * Permite dibujar un pentágono verde por parámetros.
-     * @param posicionX
-     * @param posicionY
+     * Permite dibujar un pentágono verde.
      */
     public void drawPentagon()
     {
@@ -62,6 +60,20 @@ public class DrawDemo
         for (int i = 0; i < 5; i++) {
             pen.move(100);
             pen.turn(72);
+        }       
+    }
+    
+    /**
+     * Permite dibujar un polígono regular de n lados implementados por parámetro.
+     * @param nLados
+     */
+    public void drawPoligon(int nLados)
+    {
+        Pen pen = new Pen(100, 150, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i = 0; i < nLados; i++) {
+            pen.move(100);
+            pen.turn(360/nLados);
         }       
     }
 
