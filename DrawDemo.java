@@ -49,6 +49,21 @@ public class DrawDemo
             pen.turn(120);
         }       
     }
+    
+    /**
+     * Permite dibujar un pentágono verde por parámetros.
+     * @param posicionX
+     * @param posicionY
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(100, 150, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i = 0; i < 5; i++) {
+            pen.move(100);
+            pen.turn(72);
+        }       
+    }
 
     /**
      * Draw a wheel made of many squares.
