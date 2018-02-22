@@ -34,7 +34,7 @@ public class DrawDemo
 
         square(pen);
     }
-    
+
     /**
      * Permite dibujar un triángulo verde por parámetros.
      * @param posicionX
@@ -49,7 +49,7 @@ public class DrawDemo
             pen.turn(120);
         }       
     }
-    
+
     /**
      * Permite dibujar un pentágono verde.
      */
@@ -62,7 +62,21 @@ public class DrawDemo
             pen.turn(72);
         }       
     }
-    
+
+    /**
+     * Permite dibujar una espiral.
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i = 0; i < 100; i++) {
+            pen.move(10 + i*3);
+            pen.turn(90);
+
+        }       
+    }
+
     /**
      * Permite dibujar un polígono regular de n lados implementados por parámetro.
      * @param nLados
@@ -115,11 +129,11 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
